@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ari The Turtle" />
+    <meta
+      name="description"
+      content="Airlie Wallet & Impact — View your $AIRLIE balance by connecting your Pi Wallet."
+    />
+    <title>Airlie Wallet & Impact — $AIRLIE Balance</title>
+
+    <!-- Pi Platform SDK (required for Pi Apps) -->
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+
+    <!-- App Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="wallet.css" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="icons/icon-512.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="badge-airlie">
+        <img src="icons/icon-512.png" alt="Airlie Logo" />
+        <span>$AIRLIE</span>
+      </div>
+
+      <div class="header-text">
+        <h1>Airlie Wallet & Impact</h1>
+        <p>Connect your Pi Wallet to view your $AIRLIE balance.</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Connect Wallet Section -->
+      <section class="card" id="connect-section">
+        <h2>Connect Pi Wallet</h2>
+        <p id="status-message">
+          To get started, connect your Pi Wallet and we’ll display your $AIRLIE balance here.
+        </p>
+
+        <button id="connect-wallet-btn" class="btn-primary">
+          Connect Pi Wallet
+        </button>
+      </section>
+
+      <!-- Wallet Info Section -->
+      <section class="card" id="wallet-section" style="display: none;">
+        <h2>Your Wallet</h2>
+
+        <div class="wallet-info">
+          <div class="wallet-field">
+            <span class="label">Wallet Address</span>
+            <span class="value" id="wallet-address"></span>
+          </div>
+
+          <div class="wallet-field">
+            <span class="label">$AIRLIE Balance</span>
+            <div class="balance-row">
+              <span class="balance-value" id="token-balance"></span>
+              <span class="balance-symbol">$AIRLIE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transactions Section (optional for MVP) -->
+      <section class="card" id="transactions-section" style="display: none;">
+        <h2>Recent Transactions</h2>
+        <p class="muted">
+          Below are your most recent $AIRLIE transactions.
+        </p>
+
+        <ul id="transactions-list">
+          <!-- Filled dynamically by wallet.js -->
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Airlie Reef Project — Protecting the reef, one action at a time.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script src="wallet.js"></script>
+  </body>
+</html>

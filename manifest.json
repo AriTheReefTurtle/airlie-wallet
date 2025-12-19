@@ -1,0 +1,29 @@
+{
+  "name": "Airlie Reef Wallet",
+  "short_name": "AIRLIE Wallet",
+  "description": "Check your AIRLIE token balance on the Pi Testnet. Built for the Airlie Reef Ecosystem.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1DA1F2",
+  "orientation": "portrait-primary",
+
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+
+  "pi": {
+    "api_version": "2.0",
+    "scopes": ["username", "payments"],
+    "sandbox": false
+  }
+}
